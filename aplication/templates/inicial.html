@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<main class="inicial">
+
+    
+    {% if current_user.is_authenticated %}   
+        <div class="logado">
+            <h1>Bem vindo : {{current_user.name}}</h1> 
+            <img src="{{current_user.image}} ">
+            <h4>{{current_user.image}}</h4> 
+            <p>Agora Você é membro!</p>
+            <p>Obrigado por sua Inscrição!</p>
+            <p>Siga nossas redes socias!</p>
+            <ul class="sociais">
+                <li><a style="font-size:2.5rem;list-style:disc" href=""><i class="bi bi-facebook"></i></a></li>
+                <li><a style="color:purple;font-size:2.5rem;" href=""><i class="bi bi-instagram"></i></a></li>
+                <li><a class="btn btn-outline-warning" href="{{url_for('logout')}}"><i class="bi bi-box-arrow-right"></i>  Sair</a> </li>
+                <li><a  class="btn btn-outline-danger" href="/contas"><i class="bi bi-gear"></i>  Opções</a></li>   
+            </ul> 
+        </div>
+    
+    {% else %} 
+    <div class="visitante">
+        <h1>Cadastro de Usuario com Python-Flask e Mysql</h1>
+        <p>Faça o seu Cadastro já!</p>
+        <a  class="btn btn-outline-success" href="/register"><i class="bi bi-person-plus"></i>  Cadastre-se</a>  
+    </div>
+
+   
+    {% endif %} 
+</main>
+
+{% endblock  %}

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content  %}
+
+<section class="cadastro">
+    <h1>Salvar Imagem</h1>
+    <form action="/upload" enctype="multipart/form-data" method="post"> <!--FORMULARIO PARA REGITRO DE  USUARIO  --> 
+        <label  for="">Foto</label>
+        <br>
+        <input type="file"  name="image" /><br>   
+        <button class="btn btn-danger  type="submit"><i class="bi bi-person-plus"></i>  Salvar</button>
+
+    </form>
+   
+</section>
+
+{% endblock  %}
+

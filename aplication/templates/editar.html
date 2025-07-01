@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+<h1 style="text-align: center";>Editar usuario {{ editar_usuario.name }}</h1>
+<!-- PASSAR empresa como parametro -->
+<form action="/editar/{{ editar_usuario.id }}" class="container" method="POST">
+    <div class="col-xs-12">
+        <a href="/" class="btn btn-outline-warning">Voltar </a>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-md-6">
+            <input type="text" name="name" id="name"  placeholder="nome do usuario" class="form-control" value="{{editar_usuario.name}}">
+        </div>
+        <div class="col-md-6">
+            <input type="text" name="email"  id="email" placeholder="email do usuario" class="form-control" value="{{editar_usuario.email}}">
+        </div>
+        <div class="col-md-6">
+            <input type="password" name="password"  id="password" placeholder="nova senha" class="form-control" value="{{editar_usuario.password}}">
+        </div>
+        <div class="col-md-6">
+            <input type="file"  name="image" id="image" placeholder="nova Foto" class="form-control" value="{{editar_usuario.image}}"/><br> 
+        </div>
+    </div>
+    <br>
+    <div class="row col-xs-12">
+        <button type="submit" class="btn btn-block btn-primary">Confirmar</button>
+    </div>
+</form>
+
+{% endblock %}

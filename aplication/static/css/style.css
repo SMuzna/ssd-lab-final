@@ -1,0 +1,81 @@
+body
+{
+    background-image: linear-gradient( to  right, cyan,white,cyan);
+}
+ul
+{
+    list-style: circle;
+}
+.footer
+{
+    width: 100%;
+    bottom: 0px;
+    position: absolute;
+    height: 50px;
+    text-align: center;
+    background-color: grey;
+    color: #fff;
+    padding-top: 12px;
+    letter-spacing: 2px;
+    font-style: italic;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.inicial
+{
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 0 auto;
+
+    background-color: blanchedalmond;
+    text-align: center;
+    padding: 50px;
+}
+.inicial a
+{
+    margin-top: 10px;
+}
+.cadastro
+{
+    background-color: blanchedalmond;
+    text-align: center;
+    padding-bottom: 10px;
+}
+.cadastro a, input
+{
+    margin-top: 10px;
+}
+.login
+{
+    background-color: blanchedalmond;
+    text-align: center;
+    padding-bottom: 10px;
+}
+.login a, button
+{
+    margin-top: 10px;
+}
+.login img
+{
+    border-radius: 50%;
+}
+.table
+{
+    background-color: blanchedalmond;
+    text-align: center;
+}
+.btn a+a
+{
+    margin-top: 10px;
+}
+.home
+{
+    margin-top: -20px;
+    padding: 20px 0px 20px 0px ;
+    background-color: blanchedalmond;
+    
+}
+.home a
+{
+    margin-left: 10px;
+}

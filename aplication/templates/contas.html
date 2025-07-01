@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+<table class="table">
+    <h1>Opções de Usuarios</h1>
+    <thead class="table-dark">
+        <tr>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>image</th>
+            <th>Hash</th>
+            <th>Ações</th>	
+        </tr>
+    </thead>
+    <br>
+    <tbody>
+        {% for e in contas %}
+        <tr>
+            <td>{{e.name}}</td>
+            <td>{{e.email}}</td>
+            <td>{{e.image}}</td>
+            <td>{{e.password}}</td>
+            <td class="btn">
+                <a href="/editar/{{e.id}}" class="btn btn-block btn-warning" ><i class="bi bi-pencil"></i>  Editar Usuario</a> 	
+                <a href="/deletar/{{e.id}}" class="btn btn-block btn-danger"><i class="bi bi-trash3"></i>  Apagar Usuario</a> 	
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<div class="home">
+    <a class="btn btn-outline-primary" href="/"><i class="bi bi-house"></i>  Home</a>
+</div>
+{% endblock %}
